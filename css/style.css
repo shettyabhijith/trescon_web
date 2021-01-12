@@ -81,15 +81,6 @@ p.ms_header12 {
 }
 
 
-
-
-
-
-
-
-
-
-
 /* MS video layout ends here*/
 
 
@@ -190,10 +181,232 @@ p.real_name1a {
 }
 
 
+
 /* business platform starts here */
+
+p.business_platform_header {
+  /* width: 100%; */
+  text-align: center;
+  color: #000;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  font-size: 36px;
+}
+
+.business_platform {
+  background: #f5f5f5;
+  padding: 50px 200px;
+}
+
+.business_platform_box1 {
+  box-shadow: 0px 0px 40px 0px rgba(0,0,0,.2);
+  padding: 20px;
+  background-color: #fff;
+  margin: 20px;
+  border-radius: 3px;
+}
+
+.bp_explained {
+  padding: 20px;
+  min-height: 250px;
+}
+
+p.bp_exp1 {
+  color: #032e42;
+  font-weight: 600;
+  font-size: 22px;
+}
+
+p.bp_exp2 {
+  color: #676767;
+  line-height: 27px;
+  font-size: 14px;
+}
+
+.bp_know_more_layout {
+  display: flex;
+  background: #efefef;
+  text-decoration: none;
+}
+
+a.bp_know_more1a {
+  color: #032e42;
+    font-weight: 600;
+    width: 88%;
+    /* background: red; */
+    padding: 15px;
+    font-size: 15px;
+}
+
+a.bp_km_arrow {
+  color: whitesmoke !important;
+  text-decoration: none;
+  background: #12a6a4;
+  padding: 0px 21px 0px;
+  font-size: 32px;
+  clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 66% 0%);
+  font-weight: 600;
+}
+
+.bp_know_more_layout:hover {
+  background: #12a6a4;
+  transition: 0.3s ease-in-out;
+}
+
+.bp_know_more_layout:hover a.bp_know_more1a {
+    color: white !important;
+    transition: 0.3s ease-in-out;
+}
+
+
+.bp_know_more_layout:hover a.bp_km_arrow {
+  background: #efefef;
+  color: #12a6a4 !important;
+  transition: 0.3s ease-in-out;
+}
+
+.bp_left_arrow {
+  position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -11%;
+    font-size: 28px;
+    border: 1px solid black;
+    padding: 0px 12px;
+    transition: 0.5s;
+}
+
+.bp_right_arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -11%;
+  font-size: 28px;
+    border: 1px solid black;
+    padding: 0px 12px;
+    transition: 0.5s;
+}
+
+
+.bp_left_arrow:hover {
+  background: #12a6a4;
+  color: white;
+  border-color: white;
+  transition: 0.5s;
+}
+
+.bp_right_arrow:hover {
+  background: #12a6a4;
+  color: white;
+  border-color: white;
+  transition: 0.5s;
+}
 
 
 /* business platform ends here */
+
+
+
+
+
+/* upcoming event starts here */
+
+
+p.event_head1 {
+  text-align: center;
+  font-size: 34px;
+  font-weight: 600;
+}
+
+span.event_head_span {
+  border-bottom: 2px solid #12a6a4;
+  padding-bottom: 5px;
+}
+
+
+.upcoming_events{
+  /* display: flex; */
+  justify-content: center;
+  position: relative;
+}
+
+.thumbnails{
+  display: flex;
+  line-height: 0;
+  margin: 0;
+  padding: 0;
+  padding-top: 335px;
+}
+
+.thumbnails li {
+  flex: auto;
+  list-style: none;
+  transition: transform .3s ease-out;
+}
+
+.thumbnails li:hover {
+  transform: translate(0, -5px);
+}
+
+.thumbnails li a {
+  display: block;
+}
+
+.thumbnails img {
+  border: 1px solid white;
+  object-fit: cover;
+  object-position: center;
+}
+
+.slides {
+  overflow: hidden;
+  /* height: 100vmin;
+  width: 75vmin; */
+}
+
+.slides li {
+  position: absolute;
+  z-index: 1;
+  list-style: none;
+  width: 95%;
+  text-align: center;
+  top: 15%;
+}
+
+.slides img {
+  /* height: 100vmin; */
+  object-fit: cover;
+  object-position: center;
+  padding-top: 10px;
+}
+
+.slides li:target{
+  z-index: 3;
+  -webkit-animation: slide 1s 1;
+}
+
+@keyframes slide {
+  0%{
+    transform: translateX(-100%);
+  }
+  100%{
+    transform: translateX(0%);
+  }
+}
+
+@keyframes hidden {
+  0%{
+    z-index: 2;
+  }
+
+  100%{
+    z-index: 2;
+  }
+}
+
+/* upcoming event ends here */
 
 
 
@@ -323,3 +536,196 @@ p.advisory_place {
 }
 
   /* Testimonial Ends here */
+
+
+
+  /*join trescon starts here */
+
+.join_trescon {
+    display: flex;
+}
+
+.career_trescon_layout {
+  width: 60%;
+
+}
+
+.career_tresc_inside{
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.other_trescon_layout {
+    width: 40%;
+}
+
+img.fun_tresc_img {
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+img.fun_tresc_img:hover {
+  width: 100%;
+  transform: translateX(-20px);
+}
+
+img.travel_tresc_img {
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+img.travel_tresc_img:hover {
+  width: 100%;
+  transform: translateX(-20px);
+}
+
+/* .career_other1ad {
+  position: relative;
+  display: table;
+  width: 100%;
+  height: 100%;
+  background: #fbd23b;
+  background-image: url(../images/career_tresc2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+} */
+
+/* .career_other1ad::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+  background: #ef00ff4d;
+  content: "";
+} */
+
+p.career_tresc_p {
+  font-size: 35px;
+  font-weight: 900;
+  margin-bottom: 28px;
+}
+
+a.career_knore_more {
+  padding: 8px 33px;
+  border: 1px solid #000000;
+  color: black;
+  text-decoration: none;
+}
+
+.modal-dialog.tresc_video_dialog {
+  max-width: 750px;
+}
+
+div#exampleModal {
+  top: 11%;
+}
+
+
+
+img.career_tresc_img1212 {
+  /* object-fit: contain; */
+  /* object-position: center; */
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.career_other1ad {
+  height: 100%;
+}
+
+
+.flip-card {
+  background-color: transparent;
+  height: 100%;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  position: relative;
+    background-color: #bbb;
+    color: black;
+    height: 100%;
+}
+
+.flip-card-back {
+  position: absolute;
+  background-color: rgb(255, 213, 58);
+  color: white;
+  transform: rotateY(180deg);
+  top: 0;
+  left: 0;
+  display: table;
+  height: 100%;
+}
+
+.flip_back_career {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/* join trescon ends here */
+
+
+
+
+@media (max-width:786px){
+  p.real_time_header2{
+    font-size: 40px;
+  }
+
+  .business_platform{
+    padding: 20px;
+  }
+
+  p.real_num1a{
+    font-size: 20px;
+  }
+
+  p.real_name1a{
+    font-size: 11px;
+  }
+
+  .real_time1{
+    padding: 5px;
+  }
+
+  .thumbnails{
+    padding-top: 210px;
+  }
+
+  .slides li{
+    width: 75%;
+  }
+
+  div#exampleModal{
+    top: 0;
+  }
+}
