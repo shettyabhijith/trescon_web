@@ -104,16 +104,33 @@ function showDiv(num) {
   }
 
 
-  $("#main123").t({
-      beep:true,
-      caret:'<span style="color:pink;">.<span>',
-      typing:function(elm,chr){
-          if(chr.match(/\-trigger/))
-          $('#pow-txt').show().delay(500).fadeout(0);
-      }
+  $(function(){
+      $('#business_platform_carousel').owlCarousel({
+    // autoPlay: true,
+    loop: true,
+    margin: 0,
+    nav:true,
+    smartSpeed: 300,
+    autoplaySpeed: 4000,
+    autoplayTimeout: 2000,
+    responsiveRefreshRate: 10,
+    
+    responsive:{
+        0:{
+            items:1,
+        },
+        700:{
+            items:2,
+        },
+        1000:{
+            items:2
+        }
+    }
+
   });
+  $( ".owl-prev").html('<i class="bp_left_arrow" aria-hidden="true">←</i>');
+  $( ".owl-next").html('<i class="bp_right_arrow" aria-hidden="true">→</i>');
 
-
-
-
+  });
+  
 
