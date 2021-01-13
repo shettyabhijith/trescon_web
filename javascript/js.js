@@ -20,7 +20,7 @@
 
 $(function(){
     $("#ms_video_header_carousel").owlCarousel({
-        // autoplay:true,
+        autoplay:true,
         loop:true,
         smartSpeed:300,
         autoplayTimeout:4000,
@@ -106,13 +106,13 @@ function showDiv(num) {
 
   $(function(){
       $('#business_platform_carousel').owlCarousel({
-    // autoPlay: true,
+    autoPlay: true,
     loop: true,
     margin: 0,
     nav:true,
     smartSpeed: 300,
-    autoplaySpeed: 4000,
-    autoplayTimeout: 2000,
+    autoplaySpeed: 400,
+    autoplayTimeout: 200,
     responsiveRefreshRate: 10,
     
     responsive:{
@@ -132,5 +132,126 @@ function showDiv(num) {
   $( ".owl-next").html('<i class="bp_right_arrow" aria-hidden="true">→</i>');
 
   });
+
+
+  //map footer
+
+  //hover 1
+
+  $(".loc1").hover(function(){
+    $('.map_address_1').css('visibility', 'visible');},
+    function(){
+
+    $('.map_address_1').css('visibility', 'hidden');
+});
+
+$(".map_address_1").hover(function(){
+    $(this).css('visibility', 'visible');},
+    function(){
+
+    $(this).css('visibility', 'hidden');
+});
+
+
+  //hover 2
+  $(".loc2").hover(function(){
+    $('.map_address_2').css('visibility', 'visible');},
+    function(){
+
+    $('.map_address_2').css('visibility', 'hidden');
+});
+
+$(".map_address_2").hover(function(){
+    $(this).css('visibility', 'visible');},
+    function(){
+
+    $(this).css('visibility', 'hidden');
+});
+
+
+
+
+  //hover 3
+  $(".loc3").hover(function(){
+    $('.map_address_3').css('visibility', 'visible');},
+    function(){
+
+    $('.map_address_3').css('visibility', 'hidden');
+});
+
+$(".map_address_3").hover(function(){
+    $(this).css('visibility', 'visible');},
+    function(){
+
+    $(this).css('visibility', 'hidden');
+});
+
+
+
+
+  //hover 4
+  $(".loc4").hover(function(){
+    $('.map_address_4').css('visibility', 'visible');},
+    function(){
+
+    $('.map_address_4').css('visibility', 'hidden');
+});
+
+$(".map_address_4").hover(function(){
+    $(this).css('visibility', 'visible');},
+    function(){
+
+    $(this).css('visibility', 'hidden');
+});
+
+
+
+  //hover 5
+  $(".loc5").hover(function(){
+    $('.map_address_5').css('visibility', 'visible');},
+    function(){
+
+    $('.map_address_5').css('visibility', 'hidden');
+});
+
+$(".map_address_5").hover(function(){
+    $(this).css('visibility', 'visible');},
+    function(){
+
+    $(this).css('visibility', 'hidden');
+});
+
+//map footer ends here 
+
+$(function(){
+    $("#other_partner_carousel").owlCarousel({
+        // autoplay:true,
+        loop:true,
+        smartSpeed:200,
+        autoplayTimeout:2000,
+        autoplaySpeed:2000,
+        responsiveRefreshRate : 10,
+        nav:true,
+        responsive:{
+            0:{
+                items:1,
+            },
+            600:{
+                items:3,
+    
+            },
+            1000:{
+                items:5
+            }
+        }
+
+    });
+    $( ".owl-prev").html('<i class="bp_left_arrow" aria-hidden="true">←</i>');
+  $( ".owl-next").html('<i class="bp_right_arrow" aria-hidden="true">→</i>');
+
+});
+
+
+
   
 
