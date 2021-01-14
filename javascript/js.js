@@ -120,7 +120,7 @@ function showDiv(num) {
             items:1,
         },
         700:{
-            items:2,
+            items:1,
         },
         1000:{
             items:2
@@ -252,6 +252,16 @@ $(function(){
 });
 
 
+// $('.go_up').on("click",function(){
+//     $(window).scrollTop(0);
+// });
 
   
+$('.go_up').click(function(){
+    $('html, body').animate({scrollTop:0}, 'slow');
+    return false;
+});
 
+$("i.fa.fa-bars.mbl_bar1a").click(function(){
+    $(".nav_bar_mbl_1a").slideToggle();
+})
