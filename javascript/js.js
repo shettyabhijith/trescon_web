@@ -13,14 +13,16 @@
 //             clearInterval(timer);
 //         }
 //     }, stepTime);
-// }
+// } 
 
 // animateValue("value", 0, 100, 1000);
 
 
 $(function(){
     $("#ms_video_header_carousel").owlCarousel({
-        autoplay:true,
+        // autoplay:true,
+        // touchDrag: false,
+        //  mouseDrag: false,
         loop:true,
         smartSpeed:300,
         autoplayTimeout:4000,
@@ -47,61 +49,11 @@ $(function(){
 
 //ms content change
 
-var activeDiv = 1;
-showDiv(activeDiv); // show first one because all are hidden by default
-var timer = setInterval(changeDiv, 10000);
-
-function changeDiv() {
-    activeDiv++;
-
-    if (activeDiv == 5) {
-        activeDiv = 1;
-    }
-
-
-    showDiv(activeDiv);
-}
-
-function showDiv(num) {
-    
-    var i = 0;
-    var txt = $(".ms_headers1a").text();
-    var speed = 50;
-
-
-  function typeWriter() {
-    if (i < txt.length) {
-        
-
-
-        // $(".ms_headers1a").text().innerHTML += txt.charAt(i);
-      document.getElementsByClassName("ms_headers1a").innerHTML += txt.charAt(i);
-      i++;
-      setTimeout(typeWriter, speed);
-
-     
-    }
-  }
-
-  typeWriter();
 
   
 
 
 
-//   function sss(){
-//   if (i < z.length) {
-//     $('#ms_conent_id' + num).innerHTML += z.charAt(i);
-//       i++;
-//      setTimeout(sss(), speed);
-//     }
-//   }
-
-//   sss();
-//       $('div.ms_content_part1').hide(); // hide all
-//       $('#ms_conent_id' + num).fadeIn(000); // show active
-
-  }
 
 
   $(function(){
@@ -265,3 +217,142 @@ $('.go_up').click(function(){
 $("i.fa.fa-bars.mbl_bar1a").click(function(){
     $(".nav_bar_mbl_1a").slideToggle();
 })
+
+
+var showText = function (target, message, index, interval) {   
+    if (index < message.length) {
+        $(target).append(message[index++]);
+        setTimeout(function () { showText(target, message, index, interval); }, 40);
+    }
+    else {
+        $(this).hide();
+    }
+}
+
+
+
+//  window.setInterval(function(){
+//     var text1 = "THE WORLD'S FASTEST GROWING B2B EVENTS COMPANY";
+//     showText("#text1", text1, 0, 50);  
+//    }, 1000);
+
+//    $("#text1").hide();
+
+// $(function () {
+    
+// });
+
+// window.setInterval(function(){
+//     var text2 = $('#text2').text().trim();
+//     showText("#text2", text2, 0, 50);   
+//   }, 5000);
+
+
+
+
+// Go through a sentence, wrap its characters with spans
+function setUpCharacters() {
+    var $sentences = $('.sentence');
+  
+    // Run for each sentence
+    $sentences.each(function() {
+      var $sentence = $(this);
+      var newContent = '';
+  
+      // Go through all characters of the sentence
+      for (i = 0; i < $sentence.text().length; i++) {
+        var substring = $sentence.text().substr(i, 1);
+  
+        // If we have a character, wrap it
+        if (substring != " ") {
+          newContent += '<span>' + substring + '</span>';
+        } else {
+          newContent += substring;
+        } 
+      }
+  
+      // Replace content
+      $sentence.html(newContent); 
+    });
+  }
+  
+  setUpCharacters();
+  
+
+  // Go through a sentence and trigger activate state
+function triggerCharacters() {
+    var sentenceCounter = 0;
+    var sentenceDelay = 600;
+    var interval = 5000;
+    $('.sentence').each(function() {
+      var $sentence = $(this);
+  
+      // Trigger for each sentence
+      setTimeout(function() {
+        var $spans = $sentence.find('span');
+        var spanCounter = 0;
+        var spanDelay = 75;
+  
+        // Loop through all spans and activate
+        $spans.each(function() {
+          var $span = $(this);
+  
+          // Trigger a timeout so each span is offset
+          setInterval(() => {
+            $span.toggleClass('active');
+          }, (spanCounter * spanDelay), interval);
+          
+        //   setTimeout(function() {
+        //     $span.toggleClass('active');
+        //   }, (spanCounter * spanDelay));
+  
+          spanCounter++; 
+        });
+      }, (sentenceCounter * sentenceDelay));
+  
+      sentenceCounter++;
+      
+    });
+   
+  }
+  
+  // For our example, trigger character animations on button click
+ 
+    triggerCharacters();
+
+    
+    var $text = $("#text");
+    var numbers = ["THE WORLD'S FASTEST GROWING B2B EVENTS COMPANY",
+                    "EXPLORING NEW AND EXCITING AVENUES IN THE EVENTS INDUSTRY",
+                    " CREATING BENCHMARKS IN HIGH-LEVEL GATHERINGS",
+                    "FASTEST COMPANY TO HOST HIGHEST NUMBER OF VIRTUAL EVENTS DURING THE COVID-19 PANDEMIC",
+                    "SETTING NEW BENCHMARKS IN THE VIRTUAL EVENTS SPACE",
+                    "EXPERTS IN BESPOKE AND IN-HOUSE EVENTS",
+                    "Seventh",
+                    "Eighth",
+                    "Ninth",
+                    "Tenth"];
+
+    
+
+    $(function abc(){
+
+  
+    for (i = 1; i <= 9; i++) {
+        
+            (function a(index) {
+                setTimeout(function() { 
+                  $text.html(numbers[index-1]);
+                }, i * 1000);
+              })(i);
+              
+    }   
+    // if(i>8){
+    //   i=1;
+
+     
+    // }
+    // else {
+      
+    // }
+  });
